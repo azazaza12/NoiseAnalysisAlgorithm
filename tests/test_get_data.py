@@ -25,7 +25,7 @@ def test_get_data_success(monkeypatch):
     # Подменяем функции
     monkeypatch.setattr('start_program.functions.get_count_num_channels', lambda las: 3)
     monkeypatch.setattr('start_program.functions.get_channel_type', lambda las: 'LF')
-    monkeypatch.setattr('start_program.initialize_constants', lambda f, d, l, a, c: {'dummy': 1})
+    monkeypatch.setattr('start_program.initialize_constants', lambda f, d, c: {'dummy': 1})
 
     frequencies, depth, aps_data = get_data(tmp_file_path)
 

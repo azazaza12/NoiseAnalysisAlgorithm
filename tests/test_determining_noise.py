@@ -29,4 +29,4 @@ def test_determiningNoise_borehole_ru():
     frequencies = np.array([0, 1, 2, 3])
     depth = np.array([0, 1, 2, 3])
     result = functions.determiningNoise(points, frequencies, depth, language_="r")
-    assert result == ["Борхол"]
+    assert result == ["Буровая колонна"]

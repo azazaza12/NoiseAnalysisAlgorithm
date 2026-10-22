@@ -36,6 +36,6 @@ def test_find_contours_none_array():
 def test_find_contours_no_objects():
     # Тестируем с массивом, не содержащим объектов
     test_array = np.zeros((5, 5), dtype=np.uint8)
-    contours, drawing = find_contours(test_array)
+    contours = find_contours(test_array)
     # В этом случае контуров не должно быть
     assert len(contours) == 0, "Контуры найдены, хотя их не должно быть"

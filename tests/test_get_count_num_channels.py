@@ -3,7 +3,7 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from functions import get_count_num_channels  # Замени 'your_module' на правильное имя файла
+from functions import get_count_num_channels
 
 class DummyLas:
     def __init__(self, curvesdict):
@@ -35,4 +35,5 @@ def test_get_count_num_channels_snl_flowing():
 
 def test_get_count_num_channels_no_channels():
     las = DummyLas({})
-    assert get_count_num_channels(las) == 0
+    with pytest.raises(ValueError, match="No valid channels"):
+        get_count_num_channels(las)

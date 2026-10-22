@@ -12,7 +12,7 @@ def test_find_contour_indexes_to_keep():
     result = find_contour_indexes_to_keep(cnts)
     assert result == [0, 1], "Оба прямоугольника должны остаться (нет пересечений)"
 
-def find_contour_indexes_to_keep():
+def test_find_contour_indexes_to_keep_nested():
     cnts = [
         [0, 0, 4, 4],  # большой прямоугольник
         [2, 2, 3, 3],  # маленький, внутри первого

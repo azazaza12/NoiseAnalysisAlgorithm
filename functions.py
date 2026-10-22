@@ -240,7 +240,7 @@ def remove_excess_peaks(array_of_cnts, array_of_maximums, array_of_minimums, arr
         peaks_to_merge = []
         xmin = min(array_of_x_coordinates[i])
         peaks_in_one_cnt = array_of_maximums[i]
-        if (len(peaks_in_one_cnt != 0)):
+        if len(peaks_in_one_cnt) != 0:
             indices = find_indices(peaks_in_one_cnt, array_of_minimums[i])
             # в контуре 1 пик
             if (len(indices) == 1):
@@ -433,7 +433,7 @@ def find_contour_indexes_to_keep(array_of_cnts):
 
 # отрисовка новых контуров
 def extract_contours_coordinates(array_of_cnt, cnts_with_x_y_intersections):
-    if array_of_cnt == None or len(array_of_cnt) == 0:
+    if array_of_cnt is None or len(array_of_cnt) == 0:
         raise ValueError('Массив пуст, объекты не определены')
     array_of_cnt = np.array(array_of_cnt)
     new_points = []

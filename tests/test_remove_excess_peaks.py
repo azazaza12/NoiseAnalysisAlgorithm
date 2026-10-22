@@ -29,7 +29,7 @@ def test_remove_excess_peaks_no_peaks():
     depth = np.arange(0, 10)
 
     result = remove_excess_peaks(cnts, maxs, mins, x_coords, zero_deriv, freqs, depth)
-    assert result == [[1, 2, 5, 6]]  # общий прямоугольник
+    assert result == [[[1, 2, 5, 6]]]  # один контур с общим прямоугольником
 
 
 # Тест: если массивы минимумов пустые

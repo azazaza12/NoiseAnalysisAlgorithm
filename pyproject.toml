@@ -1,0 +1,27 @@
+[project]
+name = "noise-analysis-algorithm"
+version = "0.1.0"
+description = "Detection and classification of acoustic anomalies in spectral noise logging data"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "imutils>=0.5.4",
+    "lasio>=0.31",
+    "matplotlib>=3.9",
+    "numpy>=2.0",
+    "openpyxl>=3.1",
+    "opencv-python>=4.10",
+    "pandas>=2.2",
+    "scipy>=1.14",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.uv]
+package = false
